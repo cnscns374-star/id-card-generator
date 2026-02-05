@@ -57,8 +57,8 @@ if st.button("Generate ID Card & Send Email"):
 
         # ---------- EMAIL SENDING ----------
         try:
-            sender_email = "cnscns374@gmail.com"
-            sender_password = "trsk smzi brbe fsno"
+            sender_email = st.secrets["EMAIL"]
+            sender_password = st.secrets["PASSWORD"]
 
             msg = EmailMessage()
             msg["Subject"] = "Your I-Card"
@@ -85,5 +85,6 @@ if st.button("Generate ID Card & Send Email"):
 
     else:
         st.warning("⚠ Please fill all fields and upload photo")
+
 
 
